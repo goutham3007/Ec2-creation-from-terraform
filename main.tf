@@ -2,7 +2,7 @@
 provider  "aws"  {
   region     = "us-east-1"
   access_key = "AKIASFZGJYEXWVPRGFFG"
-  secret_key = "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" # without awscli we need to right these two steps
+  secret_key = "cJ5OE/fydymgnxh/CcPphxIywuwyFJw9W/PyvyID" # Without awscli we need to right these two steps 4,5 lines
 }
 
 
@@ -50,8 +50,8 @@ resource "aws_security_group" "webSg" {
 
   ingress {
     description = "HTTP from VPC"
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -91,11 +91,7 @@ resource "aws_instance" "server" {
     host        = self.public_ip
   } 
 
- # File provisioner to copy a file from local to the remote EC2 instance
-  # provisioner "file" {
-  #   source      = "install_jenkins.sh"  # Replace with the path to your local file
-  #   destination = "/tmp/install_jenkins.sh"  # Replace with the path on the remote instance
-  # }
+ 
 
   
 
