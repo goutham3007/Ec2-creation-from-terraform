@@ -1,8 +1,8 @@
 # Define the AWS provider configuration.
 provider  "aws"  {
   region     = "us-east-1"
-  access_key = "AKIASFZGJYEXWVPRGFFG"
-  secret_key = "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" # Without awscli we need to right these two steps 4,5 lines
+  access_key = ""
+  secret_key = "" # Without awscli we need to right these two steps 4,5 lines
 }
 
 
